@@ -9,20 +9,22 @@ export default createGlobalStyle`
     }
     :root {
       --placeholder-text: #868E96;
-      --background-primary: #C2D8DA;
+      --background-primary: #655e91;
       --light-grey: #F3F3F3;
-      --black: #070707;
+      --black: #3d3c3c;
       --dark-blue: #22333B;
       --grey-1: #C4C4C4;
       --blue-1: #001AFF;
       --blue-2: #3461FF;
-      --blue-3: #9FB6F0;
+      --blue-3: #5d8afd;
       --card: #908C8C;
+      --side-background: #e3e3e3;
     }
     body {
         font-size: 1rem;
         font-family: 'Inter', sans-serif;
         overflow-x:hidden;
+        background-color: var(--background-primary)
     }
     button {
         font-family: 'Inter', sans-serif;
@@ -44,5 +46,8 @@ export default createGlobalStyle`
     }
     a {
         text-decoration: none;
+    }
+    p {
+        color: var(--card)
     }
 `;

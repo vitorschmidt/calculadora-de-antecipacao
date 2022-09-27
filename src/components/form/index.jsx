@@ -12,20 +12,31 @@ const Form = () => {
       <h2>Simule sua Antecipação</h2>
       <form onChange={handleSubmit(postContent)}>
         <label>
-          <h4>Informe o valor da venda *</h4>
-          <input type="text" name="amount" {...register("amount")} />
+          <p>Informe o valor da venda *</p>
+          <input
+            type="text"
+            name="amount"
+            placeholder="ex: 1.500,00"
+            {...register("amount")}
+          />
         </label>
         <label>
-          <h4>Em quantas parcelas *</h4>
+          <p>Em quantas parcelas *</p>
           <input
             type="text"
             name="installments"
+            placeholder="ex: 4"
             {...register("installments")}
           />
         </label>
         <label>
-          <h4>Informe o percentual de MDR *</h4>
-          <input type="text" name="mdr" {...register("mdr")} />
+          <p>Informe o percentual de MDR *</p>
+          <input
+            type="text"
+            name="mdr"
+            placeholder="ex: 4"
+            {...register("mdr")}
+          />
         </label>
       </form>
     </Container>
