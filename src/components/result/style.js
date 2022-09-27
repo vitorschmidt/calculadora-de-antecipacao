@@ -16,6 +16,7 @@ export const Container = styled.div`
   }
 
   p {
+    width: 40%;
     color: var(--light-grey);
     font-weight: 700;
     margin-bottom: 5px;
