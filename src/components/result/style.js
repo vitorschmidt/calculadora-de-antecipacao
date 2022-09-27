@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 
   border-bottom-right-radius: 8px;
   border-top-right-radius: 8px;
@@ -20,6 +20,8 @@ export const Container = styled.div`
     font-weight: 700;
     margin-bottom: 5px;
     margin-left: 10px;
+    align-self: flex-start;
+    margin-left: 100px;
   }
 
   div {

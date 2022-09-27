@@ -11,6 +11,8 @@ export const Container = styled.div`
   border-bottom-left-radius: 8px;
   border-top-left-radius: 8px;
 
+  border-right: solid 5px var(--green);
+
   h2 {
     color: var(--black);
     margin: 10px 0px;
@@ -20,8 +22,6 @@ export const Container = styled.div`
     margin-bottom: 20px;
   }
   input {
-    height: 30px;
-    width: 100%;
     margin: 10px 0;
     padding: 8px;
   }

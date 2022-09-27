@@ -12,13 +12,14 @@ export default createGlobalStyle`
       --background-primary: #655e91;
       --light-grey: #F3F3F3;
       --black: #3d3c3c;
-      --dark-blue: #22333B;
+      --green: #a3d985;
       --grey-1: #C4C4C4;
       --blue-1: #001AFF;
       --blue-2: #3461FF;
       --blue-3: #5d8afd;
       --card: #908C8C;
       --side-background: #e3e3e3;
+      --red: #d32f2f;
     }
     body {
         font-size: 1rem;
@@ -37,7 +38,7 @@ export default createGlobalStyle`
         background-color: var(--dark-blue)
     }
     span{
-    color: var(--red-1);
+    color: var(--red);
     font-size:0.6rem;
     }
     h1,h2,h3,h4 {

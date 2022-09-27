@@ -7,7 +7,7 @@ const Result = () => {
 
   return (
     <Container>
-      <h2>Você receberá: </h2>
+      <h2>VOCÊ RECEBERÁ: </h2>
       <div></div>
       <p>
         Amanhã: R${" "}
