@@ -21,8 +21,4 @@ export const Container = styled.div`
   form {
     margin-bottom: 20px;
   }
-  input {
-    margin: 10px 0;
-    padding: 8px;
-  }
 `;

@@ -1,10 +1,10 @@
-import { Box, TextField } from "@mui/material";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { CalculatorContext } from "../../providers/calculator";
 import { Container } from "./style";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import Input from "../input";
 
 const Form = () => {
   const formSchema = yup.object().shape({
@@ -27,52 +27,31 @@ const Form = () => {
   const { postContent } = useContext(CalculatorContext);
 
   return (
-    <Container>
+    <Container id="form">
       <h2>SIMULE A SUA ANTECIPAÇÃO</h2>
-      <Box
-        onChange={handleSubmit(postContent)}
-        sx={{
-          display: "flex",
-          flexWrap: "wrap",
-          flexDirection: "column",
-          width: "200px",
-          margin: "10px",
-        }}
-      >
-        <TextField
-          required
-          id="filled-required"
-          label={"Valor da venda"}
-          placeholder="ex: 1.500,00"
+      <form onChange={handleSubmit(postContent)}>
+        <Input
           name="amount"
-          variant="filled"
-          margin="dense"
-          {...register("amount")}
+          label="Informe o valor da venda *"
+          placeholder="ex: 1500,00"
+          error={errors.amount?.message}
+          register={register}
         />
-        <span>{errors.amount && errors.amount.message}</span>
-        <TextField
-          required
-          id="filled-required"
-          label="Parcelas"
-          placeholder="ex: 4"
+        <Input
           name="installments"
-          variant="filled"
-          margin="dense"
-          {...register("installments")}
-        />
-        <span>{errors.installments && errors.installments.message}</span>
-        <TextField
-          required
-          id="filled-required"
-          label="percentual de MDR"
+          label="Em quantas parcelas *"
           placeholder="ex: 4"
-          name="mdr"
-          margin="dense"
-          variant="filled"
-          {...register("mdr")}
+          error={errors.installments?.message}
+          register={register}
         />
-        <span>{errors.mdr && errors.mdr.message}</span>
-      </Box>
+        <Input
+          name="mdr"
+          label="informe o percentual de MDR *"
+          placeholder="ex: 4"
+          error={errors.mdr?.message}
+          register={register}
+        />
+      </form>
     </Container>
   );
 };
