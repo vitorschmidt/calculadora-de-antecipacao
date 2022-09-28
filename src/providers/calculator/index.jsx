@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { api } from "../../services/api";
+import { toast } from "react-toastify";
 
 export const CalculatorContext = createContext({});
 
@@ -13,7 +14,15 @@ export const CalculatorProvider = ({ children }) => {
         setContent(response.data);
       })
       .catch((err) => {
-        console.log(err);
+        toast.error("Ocorreu um erro na requisição!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
       });
   };
 
