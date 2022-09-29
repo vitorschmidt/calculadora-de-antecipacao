@@ -10,7 +10,7 @@ export const Container = styled.div`
   margin: 100px auto;
 `;
 
-export const OtherCases = styled.div`
+export const Back = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;

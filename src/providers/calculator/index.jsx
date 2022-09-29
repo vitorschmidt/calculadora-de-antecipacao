@@ -26,8 +26,67 @@ export const CalculatorProvider = ({ children }) => {
       });
   };
 
+  const postDelay = (data) => {
+    api
+      .post("?delay=5000", data)
+      .then((response) => {
+        setContent(response.data);
+      })
+      .catch((err) => {
+        toast.error("Verifique a sua conexão com a internet", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      });
+  };
+
+  const postTimeout = (data) => {
+    api
+      .post("?timeout", data)
+      .then((response) => {
+        setContent(response.data);
+      })
+      .catch((err) => {
+        toast.error("Verifique a sua conexão com a internet", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      });
+  };
+
+  const postError = (data) => {
+    api
+      .post("?internalError", data)
+      .then((response) => {
+        setContent(response.data);
+      })
+      .catch((err) => {
+        toast.error("Erro na requisição!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      });
+  };
+
   return (
-    <CalculatorContext.Provider value={{ content, postContent }}>
+    <CalculatorContext.Provider
+      value={{ content, postContent, postDelay, postTimeout, postError }}
+    >
       {children}
     </CalculatorContext.Provider>
   );

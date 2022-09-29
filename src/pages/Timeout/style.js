@@ -9,8 +9,7 @@ export const Container = styled.div`
   width: 80%;
   margin: 100px auto;
 `;
-
-export const OtherCases = styled.div`
+export const Back = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
